@@ -1,0 +1,45 @@
+---
+title: "P8105 Homework 4"
+author: Hyun Kim (hk3373)
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+**Welcome to my page!**
+
+![](thumbs-up.jpg)
+
+# Self-Introduction
+
+Hi, my name is Hyun Kim, and I'm from South Korea. I am currently pursuing a 
+Master of Science in Biostatistics at Columbia University. As an aspiring data 
+scientist with a background in computer science, I am passionate about 
+exploring diverse applications of machine learning. For my hobbies, I enjoy 
+cooking and listening to music. 
+
+Please feel free to contact me via [email](mailto:<hk3373@cumc.columbia.edu>).
+
+# Resume
+
+I have summarized my academic and professional experience in the link below: 
+
+* [Resume](resume.html)
+
+# GitHub and LinkedIn 
+
+You can visit my GitHub account and LinkedIn profile through the links below:
+
+* [GitHub](https://github.com/projecthyee)
+
+* [LinkedIn](https://www.linkedin.com/in/projecthyee/)
+
+# Problem 2 Dashboard
+
+For Problem 2, I have created a dashboard for NYC Restaurant Inspections, 
+focusing on the scores and grades for European cuisines, which can be accessed 
+through the link below:
+
+* [NYC Restaurant Inspections](dashboard.html)
+
+
