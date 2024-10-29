@@ -1,0 +1,79 @@
+---
+title: "NYC Restaurant Inspections"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+library(flexdashboard)
+```
+
+```{r}
+data(rest_inspec)
+rest_inspec =
+  rest_inspec |>
+  select(boro, cuisine_description, inspection_date, score, grade) |>
+  filter(boro != "Missing", grade != "Not Yet Graded") |>
+  filter(cuisine_description %in% 
+           c("Czech", "Eastern European", "English", "French", "Irish", 
+             "German", "Greek", "Italian", "Polish", "Portuguese", "Russian", 
+             "Scandinavian", "Spanish")) |>
+  separate(
+    inspection_date,
+    into = c("year", "month", "day"),
+    sep = "-") |>
+  select(-c(year, day)) |>
+  drop_na()
+```
+
+This dashboard aims to explore the inspection scores and grades of NYC 
+restaurants for European cuisines. Rows with either NA values or missing 
+inspection grades were dropped. 
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Score Distribution of European Cuisines
+
+```{r}
+rest_inspec |>
+  mutate(cuisine_description = 
+           forcats::fct_reorder(cuisine_description, score)) |>
+  plot_ly(
+    y = ~score, x = ~cuisine_description, color = ~cuisine_description,
+    type = "box", colors = "viridis"
+  ) 
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Inspection Grade of European Cuisines by Borough
+
+```{r}
+rest_inspec |>
+  group_by(boro, grade) |>
+  summarize(count = n()) |>
+  plot_ly(
+    y = ~count, x = ~boro, color = ~grade,
+    type = "bar", colors = "viridis"
+  ) 
+```
+
+### Average Score of European Cuisines by Inspection Month
+
+```{r}
+rest_inspec |>
+  group_by(boro, month) |>
+  summarize(average_score = mean(score)) |>
+  plot_ly(
+    y = ~average_score, x = ~month, color = ~boro,
+    type = "scatter", mode = "lines", colors = "viridis"
+  ) 
+```
+
