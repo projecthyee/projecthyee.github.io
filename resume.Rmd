@@ -1,0 +1,55 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+# Contact
+
+* **Email:** hk3373@cumc.columbia.edu
+* **Phone:** (646) 530-4557
+
+# Education
+
+**Columbia University** | New York City, NY
+
+* *MS in Biostatistics* | May 2026
+
+**University of Miami** | Coral Gables, FL
+
+* *BSBA in Economics, Computer Science and Business Technology* | December 2023
+
+# Work Experience
+
+**University of Miami, Department of Computer Science** | Coral Gables, FL	
+
+*Teaching Assistant for Computer Organization & Architecture* | August 2023 - 
+December 2023	
+
+* Assisted the professor for 10 hours a week in a computer science course with 
+50+ students by grading homework, and holding office hours to answer student 
+questions about computer organization and architecture
+
+* Demonstrated robust knowledge about hardware design, combinatorial and 
+sequential circuits, memories (primary, cache and virtual), system software, 
+parallel computing, and network (architecture and protocols)
+
+**Republic of Korea Army** | Hwacheon, South Korea
+
+*Private to Sergeant* | July 2020 - January 2022
+
+* Served as the fire direction center (FDC) soldier of the 60mm mortar squad 
+from corporal to sergeant, utilizing chart data and coordinates to calculate 
+firing data with precision under pressure 
+
+* Coordinated with FDC officers to deliver precise fire commands, successfully 
+executing mortar fire during training exercises; organized computation results 
+and maintained accuracy in military logs
+
+# Skills
+
+**Languages:** Fluent in Korean and English, Conversational Proficiency in 
+Chinese
+
+**Technical Skills:** C/C++, Java, Python, R, SQL
